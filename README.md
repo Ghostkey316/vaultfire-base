@@ -263,8 +263,8 @@ Documentation: [github.com/Ghostkey316/vaultfire-sdk](https://github.com/Ghostke
 | [`@vaultfire/vns`](https://github.com/Ghostkey316/vaultfire-vns) | On-chain `.vns` name service — deployed on Base |
 | [`@vaultfire/sdk`](https://github.com/Ghostkey316/vaultfire-sdk) | Core SDK — belief verification & attestations |
 | [`vaultfire-contracts`](https://github.com/Ghostkey316/vaultfire-contracts) | All deployed ABIs and contract addresses |
-| [`@vaultfire/arbitrum`](https://github.com/Ghostkey316/vaultfire-arbitrum) | Arbitrum One — AI agent trust infrastructure |
-| [`@vaultfire/polygon`](https://github.com/Ghostkey316/vaultfire-polygon) | Polygon PoS — AI agent trust infrastructure |
+| [`@vaultfire/arbitrum`](https://github.com/Ghostkey316/vaultfire-arbitrum) | Arbitrum One — 16 contracts deployed |
+| [`@vaultfire/polygon`](https://github.com/Ghostkey316/vaultfire-polygon) | Polygon PoS — 16 contracts deployed |
 
 ---
 
