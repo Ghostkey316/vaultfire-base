@@ -1,5 +1,8 @@
 # Vaultfire Protocol — Base
 
+
+> **⚠️ Alpha Software** — Vaultfire Protocol is in active development. Smart contracts are deployed on Base mainnet but have **not been formally audited** by a third-party security firm. Do not deposit more than you can afford to lose. See [LICENSE](./LICENSE) for warranty disclaimers.
+
 > KYA — Know Your Agent. The trust and accountability standard for the AI age.
 
 Base is the primary hub chain for the Vaultfire Protocol. This repo is a partner-facing reference for everything deployed and live on Base mainnet today.
