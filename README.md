@@ -7,7 +7,7 @@
 
 Base is the primary hub chain for the Vaultfire Protocol. This repo is a partner-facing reference for everything deployed and live on Base mainnet today.
 
-For the full multi-chain protocol source (Base, Avalanche, Ethereum), see the [main Vaultfire repository](https://github.com/Ghostkey316/ghostkey-316-vaultfire-init).
+For the full multi-chain protocol source (Base, Avalanche, Arbitrum, Polygon), see the [main Vaultfire repository](https://github.com/Ghostkey316/ghostkey-316-vaultfire-init).
 
 ---
 
@@ -34,9 +34,9 @@ Vaultfire is the trust infrastructure for the AI agent economy — what HTTPS wa
 | x402 Trust-Gated Payments | **LIVE** | Full on-chain USDC settlement on Base |
 | Wallet Connect | **LIVE** | Coinbase Wallet, Base Wallet, MetaMask, WalletConnect |
 | Accountability Bonds | **Deployed** | Requires yield pool funding before activation |
-| Cross-Chain Trust Sync | **Deployed** | Full Base ↔ Avalanche ↔ Ethereum sync in v1.0 |
+| Cross-Chain Trust Sync | **Deployed** | Full Base ↔ Avalanche ↔ Arbitrum ↔ Polygon sync in v1.0 |
 | Quantum-Resistant Attestations | **Deployed** | CRYSTALS-Dilithium via DilithiumAttestor |
-| ZK Proofs | **Architecture** | Verification contracts in place — full ZK in v1.0 |
+| ZK Proofs (RISC Zero) | **LIVE** | RISC Zero zkVM — contracts deployed on all 4 chains, proofs generated in dev mode |
 
 ---
 
@@ -47,14 +47,15 @@ Vaultfire is the trust infrastructure for the AI agent economy — what HTTPS wa
 - **Accountability Bonds** — AI companies stake capital proportional to their risk. Misalignment has a cost.
 - **Street Cred Scoring** — Composite on-chain reputation (0–95) from identity, bonds, and peer feedback.
 - **VNS Names** — Human-readable `.vns` names for agents, like ENS but purpose-built for trust.
-- **Privacy by Design** — Zero-knowledge proofs and protocol-level anti-surveillance constraints.
+- **Zero-Knowledge Proofs (RISC Zero)** — STARK proofs on all 4 chains. Prove trust without revealing data. Dev mode verified, production proving on roadmap.
+- **Privacy by Design** — Protocol-level anti-surveillance constraints enforced in smart contracts.
 - **Quantum Resistance** — CRYSTALS-Dilithium attestations today, full protocol hardening on roadmap.
 
 ---
 
 ## Deployed Contracts — Base Mainnet (Chain ID: 8453)
 
-16 contracts deployed and verified on Base.
+17 contracts deployed and verified on Base.
 
 | Contract | Address | Status |
 |----------|---------|--------|
@@ -74,6 +75,7 @@ Vaultfire is the trust infrastructure for the AI agent economy — what HTTPS wa
 | MissionEnforcement | [`0x8568F4020FCD55915dB3695558dD6D2532599e56`](https://basescan.org/address/0x8568F4020FCD55915dB3695558dD6D2532599e56) | Deployed |
 | AntiSurveillance | [`0x722E37A7D6f27896C688336AaaFb0dDA80D25E57`](https://basescan.org/address/0x722E37A7D6f27896C688336AaaFb0dDA80D25E57) | Deployed |
 | PrivacyGuarantees | [`0xE2f75A4B14ffFc1f9C2b1ca22Fdd6877E5BD5045`](https://basescan.org/address/0xE2f75A4B14ffFc1f9C2b1ca22Fdd6877E5BD5045) | Deployed |
+| VaultfireTrustAttestation (ZK) | [`0x472dF1dD6D8218D0BF748e910E32861dAb88EDA6`](https://basescan.org/address/0x472dF1dD6D8218D0BF748e910E32861dAb88EDA6) | **LIVE** |
 
 ---
 
@@ -193,7 +195,7 @@ The Vaultfire hub runs at [theloopbreaker.com](https://theloopbreaker.com) on Ba
 | `/api/agent/status/:address` | GET | Street Cred score and tier for a wallet |
 | `/api/agent/register` | POST | Register an agent on ERC-8004 |
 | `/api/agent/bond` | POST | Create a partnership bond |
-| `/api/contracts` | GET | All 16 Base contract addresses and ABIs |
+| `/api/contracts` | GET | All 17 Base contract addresses and ABIs |
 
 ---
 
@@ -266,8 +268,8 @@ Documentation: [github.com/Ghostkey316/vaultfire-sdk](https://github.com/Ghostke
 | [`@vaultfire/vns`](https://github.com/Ghostkey316/vaultfire-vns) | On-chain `.vns` name service — deployed on Base |
 | [`@vaultfire/sdk`](https://github.com/Ghostkey316/vaultfire-sdk) | Core SDK — belief verification & attestations |
 | [`vaultfire-contracts`](https://github.com/Ghostkey316/vaultfire-contracts) | All deployed ABIs and contract addresses |
-| [`@vaultfire/arbitrum`](https://github.com/Ghostkey316/vaultfire-arbitrum) | Arbitrum One — 16 contracts deployed |
-| [`@vaultfire/polygon`](https://github.com/Ghostkey316/vaultfire-polygon) | Polygon PoS — 16 contracts deployed |
+| [`@vaultfire/arbitrum`](https://github.com/Ghostkey316/vaultfire-arbitrum) | Arbitrum One — 17 contracts deployed |
+| [`@vaultfire/polygon`](https://github.com/Ghostkey316/vaultfire-polygon) | Polygon PoS — 17 contracts deployed |
 | [`@vaultfire/a2a`](https://github.com/Ghostkey316/vaultfire-a2a) | A2A Agent Card enrichment with on-chain Vaultfire trust |
 | [`vaultfire-langgraph-demo`](https://github.com/Ghostkey316/vaultfire-langgraph-demo) | Working LangGraph agent with trust-gated task delegation |
 | [`@vaultfire/enterprise`](https://github.com/Ghostkey316/vaultfire-enterprise) | Enterprise IAM bridge — Okta/Azure AD to on-chain trust |
