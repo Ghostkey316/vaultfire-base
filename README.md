@@ -246,7 +246,7 @@ Documentation: [github.com/Ghostkey316/vaultfire-sdk](https://github.com/Ghostke
 │  ┌──────────────────────────────────────────────┐   │
 │  │           Cross-Chain Bridge                  │   │
 │  │     VaultfireTeleporterBridge (v1.0)         │   │
-│  │     Base ↔ Avalanche ↔ Ethereum              │   │
+│  │     Base ↔ Avalanche ↔ Arbitrum ↔ Polygon    │   │
 │  └──────────────────────────────────────────────┘   │
 │                                                      │
 └──────────────────────────────────────────────────────┘
