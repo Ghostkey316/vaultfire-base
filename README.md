@@ -33,8 +33,8 @@ Vaultfire is the trust infrastructure for the AI agent economy — what HTTPS wa
 | Agent Discovery | **LIVE** | Lookup by wallet address |
 | x402 Trust-Gated Payments | **LIVE** | Full on-chain USDC settlement on Base |
 | Wallet Connect | **LIVE** | Coinbase Wallet, Base Wallet, MetaMask, WalletConnect |
-| Accountability Bonds | **Deployed** | Requires yield pool funding before activation |
-| Cross-Chain Trust Sync | **Deployed** | Full Base ↔ Avalanche ↔ Arbitrum ↔ Polygon sync in v1.0 |
+| Accountability Bonds | **LIVE** | Yield pool funded and operational |
+| Cross-Chain Trust Sync | **LIVE** | VaultfireTeleporterBridge deployed on all 4 chains — hub-and-spoke topology with Base as hub |
 | Quantum-Resistant Attestations | **Deployed** | CRYSTALS-Dilithium via DilithiumAttestor |
 | ZK Proofs (RISC Zero) | **LIVE** | RISC Zero zkVM — contracts deployed on all 4 chains, proofs generated in dev mode |
 
@@ -60,8 +60,8 @@ Vaultfire is the trust infrastructure for the AI agent economy — what HTTPS wa
 | Contract | Address | Status |
 |----------|---------|--------|
 | ERC8004IdentityRegistry | [`0x35978DB675576598F0781dA2133E94cdCf4858bC`](https://basescan.org/address/0x35978DB675576598F0781dA2133E94cdCf4858bC) | **LIVE** |
-| AIPartnershipBondsV2 | [`0xC574CF2a09B0B470933f0c6a3ef422e3fb25b4b4`](https://basescan.org/address/0xC574CF2a09B0B470933f0c6a3ef422e3fb25b4b4) | **LIVE** |
-| AIAccountabilityBondsV2 | [`0xf92baef9523BC264144F80F9c31D5c5C017c6Da8`](https://basescan.org/address/0xf92baef9523BC264144F80F9c31D5c5C017c6Da8) | Deployed |
+| AIPartnershipBondsV2 | [`0x01C479F0c039fEC40c0Cf1c5C921bab457d57441`](https://basescan.org/address/0x01C479F0c039fEC40c0Cf1c5C921bab457d57441) | **LIVE** |
+| AIAccountabilityBondsV2 | [`0x6750D28865434344e04e1D0a6044394b726C3dfE`](https://basescan.org/address/0x6750D28865434344e04e1D0a6044394b726C3dfE) | **LIVE** |
 | ERC8004ReputationRegistry | [`0xdB54B8925664816187646174bdBb6Ac658A55a5F`](https://basescan.org/address/0xdB54B8925664816187646174bdBb6Ac658A55a5F) | **LIVE** |
 | ERC8004ValidationRegistry | [`0x54e00081978eE2C8d9Ada8e9975B0Bb543D06A55`](https://basescan.org/address/0x54e00081978eE2C8d9Ada8e9975B0Bb543D06A55) | Deployed |
 | VaultfireERC8004Adapter | [`0xef3A944f4d7bb376699C83A29d7Cb42C90D9B6F0`](https://basescan.org/address/0xef3A944f4d7bb376699C83A29d7Cb42C90D9B6F0) | Deployed |
@@ -143,7 +143,7 @@ console.log('View on BaseScan: https://basescan.org/tx/' + hash)
 ```javascript
 import { parseEther } from 'viem'
 
-const PARTNERSHIP_BONDS = '0xC574CF2a09B0B470933f0c6a3ef422e3fb25b4b4'
+const PARTNERSHIP_BONDS = '0x01C479F0c039fEC40c0Cf1c5C921bab457d57441'
 
 const hash = await client.writeContract({
   address: PARTNERSHIP_BONDS,
